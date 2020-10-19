@@ -1,0 +1,187 @@
+﻿<Window x:Class="l9_Graphics_and_animation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:l9_Graphics_and_animation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="314.185" Width="345.473">
+    <Grid>
+        <StackPanel>
+            <Button>Cancel</Button>
+        </StackPanel>
+        <Canvas Background="#B5000000" Width="401">
+            <Button Canvas.Left="239.055" Canvas.Top="34.989" Width="26.139" Height="38.785" RenderTransformOrigin="0.504,0.505" OpacityMask="#BF6C3C3C" BorderBrush="#FF141F44">
+                <Button.Background>
+                    <ImageBrush ImageSource="1132365_fd5c479ec1.jpg" Stretch="UniformToFill"/>
+                </Button.Background>
+                <Button.BitmapEffect>
+                    <OuterGlowBitmapEffect GlowSize="22" GlowColor="#FFD8EA22" Opacity="0.95"/>
+                </Button.BitmapEffect>
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="1.2" ScaleX="2.15"/>
+                        <SkewTransform/>
+                        <RotateTransform x:Name="rotation" Angle="-1.381"/>
+                        <TranslateTransform X="32" Y="-5"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <TextBlock Text="OK"/>
+            </Button>
+            <Canvas Height="50" Canvas.Left="12.333" Canvas.Top="17" Width="117.667">
+                <Path Data="M49.350462,0 C76.964697,-5.1214499E-07 99.350462,11.192881 99.350462,24.999999 99.350462,38.807117 76.964697,49.999999 49.350462,49.999999 33.817453,49.999999 19.938767,46.458503 10.768031,40.90232 L10.560408,40.773422 11.124106,40.82069 C14.099621,41.046764 17.218992,41.166999 20.433462,41.166999 41.006067,41.166999 57.683462,36.242134 57.683462,30.166999 57.683462,24.091867 41.006067,19.166999 20.433462,19.166999 13.361629,19.166999 6.7500692,19.748941 1.1179824,20.759508 L0,20.971157 0.13140827,20.574584 C4.3098956,8.8783373 24.756533,-5.1214499E-07 49.350462,0 z" Fill="IndianRed" Height="50" Canvas.Left="18.984" Stretch="Fill" Canvas.Top="119.333" Width="99.35">
+                    <Path.Triggers>
+                        <EventTrigger RoutedEvent="Path.MouseEnter">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard>
+                                    <Storyboard Duration="0:0:3">
+                                        <DoubleAnimation From="40.0" To="80.0" Storyboard.TargetProperty="Height"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Path.MouseLeave">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard>
+                                    <Storyboard Duration="0:0:1">
+                                        <DoubleAnimation From="80.0" To="40.0" Storyboard.TargetProperty="Height"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                    </Path.Triggers>
+                </Path>
+            </Canvas>
+            <Rectangle x:Name="title" Width="128" Height="32" Canvas.Left="91.667" Canvas.Top="27.667" Fill="#FFACC343" Stroke="#FF592121" Opacity="0.6">
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Canvas Height="126.227" Canvas.Left="38.833" Canvas.Top="27.667" Width="18">
+                <Line Y1="168" Y2="96" RenderTransformOrigin="0.5,0.5" Height="126.227" Stroke="#FF9E7C33" Fill="#FFA5C124" StrokeThickness="9" Canvas.Left="13.5">
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="0.77434847103036031" ScaleX="1.2914082450106532"/>
+                            <SkewTransform AngleX="39.253999999999991"/>
+                            <RotateTransform Angle="-2.5089999999999977"/>
+                            <TranslateTransform X="1.225" Y="1.371"/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line Y1="168" Y2="96" RenderTransformOrigin="0.5,0.5" Height="126.227" Stroke="#FF9E7C33" Fill="#FFA5C124" StrokeThickness="9">
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="0.77434847103036031" ScaleX="1.2914082450106532"/>
+                            <SkewTransform AngleX="39.253999999999991"/>
+                            <RotateTransform Angle="-2.5089999999999977"/>
+                            <TranslateTransform X="1.225" Y="1.371"/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+            </Canvas>
+            <Polyline Points="0,0 30,0 10,30 40,30" Canvas.Left="21" Canvas.Top="79.5" Height="37" Width="86.5" StrokeThickness="3">
+                <Polyline.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFB9B922" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Polyline.Fill>
+            </Polyline>
+            <local:UserControl1 Canvas.Left="12.333" Canvas.Top="77.666"/>
+            <Button Content="Button" Height="77.5" Canvas.Left="158" Canvas.Top="88" Width="124.5">
+                <Button.Background>
+                    <DrawingBrush x:Name="videoBrush"/>
+                </Button.Background>
+            </Button>
+            <Rectangle Fill="#FFACC343" Height="22" Canvas.Left="131" Stroke="#FF592121" Canvas.Top="175.5" Width="100.167">
+                <Rectangle.Triggers>
+                    <EventTrigger RoutedEvent="Rectangle.MouseUp">
+                        <EventTrigger.Actions>
+                            <BeginStoryboard>
+                                <Storyboard Duration="0:0:10">                                    
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Duration="0:0:5">
+                                        <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                                        <LinearDoubleKeyFrame KeyTime="0:0:1" Value="160"/>
+                                        <LinearDoubleKeyFrame KeyTime="0:0:2" Value="40"/>
+                                        <LinearDoubleKeyFrame KeyTime="0:0:3" Value="120"/>
+                                        <LinearDoubleKeyFrame KeyTime="0:0:4" Value="80"/>
+                                        <LinearDoubleKeyFrame KeyTime="0:0:5" Value="100"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger.Actions>
+                    </EventTrigger>
+                </Rectangle.Triggers>
+            </Rectangle>
+
+        </Canvas>
+        <DockPanel VerticalAlignment="Bottom">
+            <StackPanel Orientation="Horizontal">
+                <Button FontFamily="Sitka Heading" Width="107.489" FontWeight="Bold" BorderBrush="#4CBFD821" Height="67.003" FontSize="36">
+                    <Button.Foreground>
+                        <LinearGradientBrush x:Name="gradient" EndPoint="0.3,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform x:Name="___gradientRotation" Angle="-27.646" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <LinearGradientBrush.Transform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-4.236"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.Transform>
+                            <GradientStop Color="#FFBCC776" Offset="0.547"/>
+                            <GradientStop Color="Black" Offset="1"/>
+                            <GradientStop Color="#FFE5EAC9" Offset="0.271"/>
+                            <GradientStop Color="#C6000000"/>
+                        </LinearGradientBrush>
+                    </Button.Foreground>
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF2D159C" Offset="0"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background> Hello
+                </Button>
+                <Path Stroke="#FF1B3263" StrokeThickness="3" Fill="#EE7F95CF">
+                    <Path.Data>
+                        <GeometryGroup FillRule="Nonzero">
+                            <EllipseGeometry Center="60,50" RadiusX="40" RadiusY="30"/>
+                            <EllipseGeometry Center="100,50" RadiusX="40" RadiusY="30"/>
+                        </GeometryGroup>
+                    </Path.Data>
+                </Path>
+            </StackPanel>
+            <Path StrokeThickness="3">
+                <Path.Stroke>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF081A6C" Offset="0"/>
+                        <GradientStop Color="#FFCEF93B" Offset="1"/>
+                    </LinearGradientBrush>
+                </Path.Stroke>
+                <Path.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFDEE635" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+                <Path.Data>
+                    <PathGeometry>
+                        <PathFigure StartPoint="10,10">
+                            <LineSegment Point="100, 10"/>
+                            <LineSegment Point="100, 40"/>
+                            <LineSegment Point="70, 40"/>
+                        </PathFigure>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+
+        </DockPanel>
+    </Grid>
+</Window>
